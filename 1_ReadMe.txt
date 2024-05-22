@@ -1,0 +1,1 @@
+Before editing the document access terminal and run command `npm run build`S
