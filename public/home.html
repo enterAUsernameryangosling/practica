@@ -11,8 +11,8 @@
 </head>
 
 <body class="font-sans">
-    
-    <section class="bg-[url('../images/forest.png')]">
+
+    <section class="bg-[url('../images/forest.png')] h-screen flex flex-col">
         <header class="w-full py-8 flex justify-center">
             <div class="container">
                 <nav class="flex justify-between items-center">
@@ -20,58 +20,91 @@
                         <img src="../images/logo.png" class="size-7">
                         <h1 class="text-2xl font-bold text-white">LaraTravel</h1>
                     </div>
-    
+
                     <ul class="flex gap-16 font-medium text-white">
                         <li><a href="">Home</a></li>
                         <li><a href="">Destinations</a></li>
                         <li><a href="">About us</a></li>
                         <li><a href="">Contacts</a></li>
                     </ul>
-    
+
                     <button class="px-8 py-2 font-medium bg-emerald-800 text-white rounded-full">Log In</button>
                 </nav>
             </div>
         </header>
 
-        <section class="flex justify-center py-[100px]">
-            <div class="container flex">
-                <div class="flex flex-col gap-3">
-                    <p class="max-w-[500px] text-slate-300 font-bold">Lara Travel Agency</p>
-                    <h1 class="max-w-[500px] text-white text-5xl font-bold">Discover  the essence of adventure with us.</h1>
-                    <p class="max-w-[500px] text-slate-300">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        <section class="flex justify-center items-center h-full pb-[104px]">
+            <div class="container flex justify-center">
+                <div class="flex flex-col gap-3 items-center">
+                    <p class="max-w-[600px] text-slate-300 font-bold text-center xl:text-xl">Lara Travel Agency</p>
+                    <h1 class="max-w-[600px] text-white text-6xl font-bold text-center xl:max-w-[750px] xl:text-7xl">
+                        Discover the essence of
+                        adventure with us.</h1>
+                    <p class="max-w-[560px] text-slate-300 text-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
-    
+
                     <div class="flex">
-                        <button class="px-8 py-2 font-medium bg-emerald-800 text-white rounded-full">Go to tours</button>
+                        <button class="px-8 py-2 font-medium bg-emerald-800 text-white rounded-full">Go to
+                            tours</button>
                         <button class="px-7 py-2 font-medium text-white flex gap-x-2">
                             <img src="../images/play-button.png" style="width: 25px; height: 25px;">
                             <p>Watch Video</p>
                         </button>
                     </div>
                 </div>
-                
-                <!-- cards scroll -->
-                <div class="flex items-center gap-x-4">
-                    <div>
-                        <div class="bg-[url('../images/bavaria.png')] w-fit h-fit rounded-xl bg-cover bg-center">
-                            <img src="../images/gradient-rectangle.png" class="rounded-xl xl:w-[350px] xl:h-[530px]"></div>
-                        <p class="text-white text-xl font-bold text-center">Bavarian Hills</p>
-                    </div>
-                    <!-- xl:w va afisa dimensiune mare pentru ecrane mari -->
-
-                    <div>
-                        <div class="bg-[url('../images/kyoto.png')] w-fit h-fit rounded-xl bg-cover bg-center">
-                            <img src="../images/gradient-rectangle.png" class="rounded-xl w-[275px] h-[420px] xl:w-[300px] xl:h-[470px]">
-                        </div>
-                        <p class="text-white text-xl font-bold text-center">Kinkaku-ji Temple</p>
-                    </div>
-                </div>
             </div>
-            
         </section>
     </section>
+
+    <section class="py-[100px] flex flex-col gap-y-20">
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="max-w-[600px] text-4xl font-bold xl:max-w-[750px] xl:text-5xl text-center">Discover Beyond
+                Boundaries</h1>
+            <p class="max-w-[560px] text-base font-bold text-center text-slate-600 xl:text-lg text-center">Read about
+                our special offers and discover new opportunities</p>
+        </div>
+
+        <div class="flex justify-center gap-x-5">
+            <div class="flex flex-col items-center gap-y-3">
+                <img src="../images/kyoto.png"
+                    class="w-[350px] h-[280px] xl:w-[400px] xl:h-[350px] object-cover rounded-2xl">
+                <div>
+                    <h3 class="w-[350px] text-xl font-bold text-center">Lorem 1</h3>
+                    <p class="w-[350px] font-normal text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                        Phasellus eget augue nec libero efficitur sodales. </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-y-3">
+                <img src="../images/bus.png"
+                    class="w-[350px] h-[280px] xl:w-[400px] xl:h-[350px] object-cover rounded-2xl">
+                <div>
+                    <h3 class="w-[350px] text-xl font-bold text-center">Lorem 1</h3>
+                    <p class="w-[350px] font-normal text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                        Phasellus eget augue nec libero efficitur sodales. </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-y-3">
+                <img src="../images/cabana.png"
+                    class="w-[350px] h-[280px] xl:w-[400px] xl:h-[350px] object-cover rounded-2xl">
+                <div>
+                    <h3 class="w-[350px] text-xl font-bold text-center">Lorem 1</h3>
+                    <p class="w-[350px] font-normal text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                        Phasellus eget augue nec libero efficitur sodales. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        
+    </footer>
 </body>
 
 </html>

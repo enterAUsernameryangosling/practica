@@ -588,6 +588,10 @@ video {
   }
 }
 
+.relative {
+  position: relative;
+}
+
 .flex {
   display: flex;
 }
@@ -606,6 +610,62 @@ video {
   height: fit-content;
 }
 
+.h-\[1000px\] {
+  height: 1000px;
+}
+
+.h-\[900px\] {
+  height: 900px;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-\[800px\] {
+  height: 800px;
+}
+
+.h-\[100\] {
+  height: 100;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[280px\] {
+  height: 280px;
+}
+
+.max-h-\[\] {
+  max-height: ;
+}
+
+.max-h-\[100px\] {
+  max-height: 100px;
+}
+
+.max-h-\[1000px\] {
+  max-height: 1000px;
+}
+
+.max-h-\[2000px\] {
+  max-height: 2000px;
+}
+
 .w-\[275px\] {
   width: 275px;
 }
@@ -619,12 +679,48 @@ video {
   width: 100%;
 }
 
+.w-\[350px\] {
+  width: 350px;
+}
+
+.w-\[3\] {
+  width: 3;
+}
+
 .max-w-\[500px\] {
   max-width: 500px;
 }
 
+.max-w-\[700px\] {
+  max-width: 700px;
+}
+
+.max-w-\[560px\] {
+  max-width: 560px;
+}
+
+.max-w-\[690px\] {
+  max-width: 690px;
+}
+
+.max-w-\[680px\] {
+  max-width: 680px;
+}
+
+.max-w-\[650px\] {
+  max-width: 650px;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .items-center {
@@ -657,12 +753,77 @@ video {
        column-gap: 1rem;
 }
 
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
+.gap-y-3 {
+  row-gap: 0.75rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+
+.gap-x-9 {
+  -moz-column-gap: 2.25rem;
+       column-gap: 2.25rem;
+}
+
+.gap-x-7 {
+  -moz-column-gap: 1.75rem;
+       column-gap: 1.75rem;
+}
+
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
+.gap-y-9 {
+  row-gap: 2.25rem;
+}
+
+.gap-y-96 {
+  row-gap: 24rem;
+}
+
+.gap-y-20 {
+  row-gap: 5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .bg-emerald-800 {
@@ -690,6 +851,11 @@ video {
   background-position: center;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -715,6 +881,10 @@ video {
   padding-bottom: 100px;
 }
 
+.pb-\[104px\] {
+  padding-bottom: 104px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -738,12 +908,36 @@ video {
   line-height: 1.75rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .text-slate-300 {
@@ -756,6 +950,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-slate-600 {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+
 @media (min-width: 1280px) {
   .xl\:h-\[470px\] {
     height: 470px;
@@ -765,11 +964,82 @@ video {
     height: 530px;
   }
 
+  .xl\:h-\[400px\] {
+    height: 400px;
+  }
+
+  .xl\:h-\[350px\] {
+    height: 350px;
+  }
+
   .xl\:w-\[300px\] {
     width: 300px;
   }
 
   .xl\:w-\[350px\] {
     width: 350px;
+  }
+
+  .xl\:w-\[\] {
+    width: ;
+  }
+
+  .xl\:w-\[400\] {
+    width: 400;
+  }
+
+  .xl\:w-\[400px\] {
+    width: 400px;
+  }
+
+  .xl\:max-w-\[\] {
+    max-width: ;
+  }
+
+  .xl\:max-w-\[700px\] {
+    max-width: 700px;
+  }
+
+  .xl\:max-w-\[720px\] {
+    max-width: 720px;
+  }
+
+  .xl\:max-w-\[750px\] {
+    max-width: 750px;
+  }
+
+  .xl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .xl\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
