@@ -8,30 +8,46 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/6f20296d23.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="font-sans">
 
     <section class="bg-[url('../images/background.png')] bg-center h-[750px] flex flex-col">
-        <header class="w-full py-8 flex justify-center">
+        <header class="w-full py-8 flex justify-center z-20">
             <div class="container">
                 <nav class="flex justify-between items-center">
                     <div class="flex items-center gap-x-2">
                         <img src="../images/logo.png" class="size-7">
-                        <h1 class="text-2xl font-bold text-white">LaraTravel</h1>
+                        <h1 id="logo_text" class="text-2xl font-bold text-white">LaraTravel</h1>
                     </div>
 
-                    <ul class="flex gap-16 font-medium text-white">
+                    <ul class="flex gap-16 font-medium text-white max-md:hidden">
                         <li><a href="">Home</a></li>
                         <li><a href="">Destinations</a></li>
                         <li><a href="about.html">About us</a></li>
                         <li><a href="">Contacts</a></li>
                     </ul>
 
-                    <button class="px-8 py-2 font-semibold bg-blue-500 text-white rounded-full">Log In</button>
+                    <button class="px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Log In</button>
+                    
+                    <button id="burger" onclick="meniu_burger()" class="md:hidden text-white"><i class="fa-solid fa-bars"></i></button>
                 </nav>
             </div>
         </header>
+
+        <div id="mobile_nav" class="absolute w-full h-fit md:hidden bg-white pt-[96px] z-10 flex justify-center pb-8 opacity-0 duration-300">
+            <div class="container">
+                <ul class="flex flex-col gap-y-7 font-medium text-slate-950">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Destinations</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="">Contacts</a></li>
+                </ul>
+            </div>
+            <script src="meniu_burger.js"></script>
+        </div>
 
         <section class="flex justify-center items-center h-full pb-[104px]">
             <div class="container flex justify-center">
@@ -68,7 +84,7 @@
     
             <div class="flex justify-center items-center gap-x-[20px] max-xl:flex-col max-xl:gap-y-[20px]">
                 <div class="flex gap-x-[20px] max-lg:flex-col max-lg:gap-y-[20px]">
-                    <div class="p-8 max-w-[400px] h-[520px] flex flex-col gap-y-14 bg-blue-500 rounded-3xl max-lg:max-w-[700px] max-lg:h-[250px] max-lg:flex-row max-lg:gap-x-14">
+                    <div class="p-8 max-w-[400px] h-fit flex flex-col gap-y-14 bg-blue-500 rounded-3xl max-lg:max-w-[700px] max-lg:flex-row max-lg:gap-x-14 max-sm:flex-col">
                         <div class="flex flex-col gap-y-[10px] max-lg:gap-y-[20px]">
                             <h1 class="max-w-[320px] text-4xl font-bold text-white">Looking for a perfect place for your vacation?</h1>
                             <p class="text-slate-300 max-lg:w-[270px]">Get started today, exploring our top offers and get a a -10% discount.</p>
@@ -89,7 +105,7 @@
                         </div>
                     </div>
     
-                    <div class="flex flex-col gap-y-[20px] max-lg:flex-row max-lg:gap-x-[20px]">
+                    <div class="flex flex-col gap-y-[20px] max-lg:flex-row max-lg:gap-x-[20px] max-sm:flex-col">
                         <div class="max-w-[400px] h-[250px] bg-[url('../images/mountains.png')] bg-cover bg-center rounded-3xl flex justify-center items-center">
                             <img src="../images/gradient rectangle.png" class="rounded-3xl h-full">
                             <h3 class="absolute text-white font-semibold text-xl"> <span class="text-blue-500">[</span> Explore the Alps <span class="text-blue-500">]</span> </h3>
@@ -106,7 +122,7 @@
                     </div>
                 </div>
             
-                <div class="flex flex-col gap-y-[20px] max-xl:flex-row max-xl:gap-[20px] max-xl:justify-center lg:max-xl:w-full">
+                <div class="flex flex-col gap-y-[20px] max-xl:flex-row max-xl:gap-[20px] max-xl:justify-center lg:max-xl:w-full max-sm:flex-col">
                     <div class="container p-8 max-w-[400px] h-[250px] bg-[url('../images/frame-2.png')] bg-cover bg-center rounded-3xl flex flex-col gap-y-14">
                         <div class="w-[210px]">
                             <h3 class="text-slate-950 font-semibold text-2xl">Weekly tours</h3>
@@ -125,7 +141,7 @@
         </div>
     </section>
 
-    <section class="w-full h-[500px] bg-blue-100 flex justify-center">
+    <section class="w-full h-fit py-[50px] bg-blue-100 flex justify-center">
         <div class="container flex items-center justify-center gap-x-[100px] max-xl:flex-col max-xl:gap-y-[20px]">
             <div class="flex flex-col gap-3">
                 <h1 class="max-w-[600px] text-slate-950 text-6xl font-bold xl:max-w-[750px] xl:text-7xl max-xl:text-center">
@@ -135,7 +151,7 @@
                     Read the latest reviews or leave a review based on your latest trip.</p>
             </div>
 
-            <div class="flex gap-x-[20px] items-center">
+            <div class="flex gap-x-[20px] items-center max-sm:flex-col max-sm:gap-y-[20px]">
                 <div class="max-w-[285px] h-[270px] bg-white rounded-3xl p-4 flex flex-col gap-y-6">
                     <div class="flex items-center">
                         <div class="w-[45px] h-[45px]bg-white rounded-full"><img src="../images/user1.png"></div>
@@ -177,7 +193,7 @@
                     Lara Travel provides you all the necessary for your confort</p>
             </div>
 
-            <div class="flex justify-center gap-x-[20px]">
+            <div class="flex justify-center gap-x-[20px] flex-wrap gap-y-[20px]">
                 <div class="max-w-[250px] h-[160px] bg-white rounded-3xl shadow-md p-4 flex flex-col gap-y-[10px]">
                     <div class="flex gap-x-[10px]">
                         <div class="w-[35px] h-[35px] bg-blue-500 rounded-full flex justify-center items-center">
@@ -217,8 +233,8 @@
         </div>
     </section>
 
-    <footer class="w-full h-[300px] bg-gradient-to-r from-slate-600 to-slate-300 flex flex-col items-center justify-between">
-        <div class="container flex gap-x-24 justify-center pt-8">
+    <footer class="w-full h-fit bg-gradient-to-r from-slate-600 to-slate-300 flex flex-col items-center justify-between">
+        <div class="container flex gap-x-24 justify-center p-8 max-sm:flex-col max-sm:gap-y-24">
             <div class="flex gap-x-2">
                 <img src="../images/logo.png" class="size-7">
                 <h1 class="text-2xl font-bold text-white">LaraTravel</h1>
