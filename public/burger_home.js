@@ -1,6 +1,6 @@
 let checked = 0
 
-function meniu_burger() {
+function menu_burger() {
     let nav = document.getElementById("mobile_nav")
 
     if (checked === 0) {

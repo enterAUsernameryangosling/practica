@@ -6,28 +6,46 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/6f20296d23.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
-    <header class="w-full py-8 flex justify-center">
-        <div class="container">
-            <nav class="flex justify-between items-center">
-                <div class="flex items-center gap-x-2">
-                    <img src="../images/logo.png" class="size-7">
-                    <h1 class="text-2xl font-bold text-slate-950">LaraTravel</h1>
-                </div>
+    <section>
+        <header class="w-full py-8 flex justify-center z-20">
+            <div class="container">
+                <nav class="flex justify-between items-center">
+                    <div class="flex items-center gap-x-2">
+                        <img src="../images/logo.png" class="size-7">
+                        <h1 id="logo_text" class="text-2xl font-bold text-slate-950">LaraTravel</h1>
+                    </div>
 
-                <ul class="flex gap-16 font-medium text-slate-950">
+                    <ul class="flex gap-16 font-medium text-slate-950 max-md:hidden">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                    </ul>
+
+                    <button class="px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Log In</button>
+                    
+                    <button id="burger" onclick="menu_burger()" class="md:hidden text-slate-950"><i class="fa-solid fa-bars"></i></button>
+                </nav>
+            </div>
+        </header>
+
+        <div id="mobile_nav" class="absolute w-full h-fit md:hidden bg-white z-10 flex justify-center pb-8 opacity-0 duration-300">
+            <div class="container">
+                <ul class="flex flex-col gap-y-7 font-medium text-slate-950">
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="">Destinations</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
                     <li><a href="about.html">About us</a></li>
-                    <li><a href="">Contacts</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
                 </ul>
-
-                <button class="px-8 py-2 font-semibold bg-blue-500 text-white rounded-full">Log In</button>
-            </nav>
+            </div>
+            <script src="burger_pages.js"></script>
         </div>
-    </header>
+    </section>
 
     <section class="flex justify-center py-[100px]">
         <div class="container grid grid-cols-2 grid-rows-3 gap-y-[50px] justify-items-center px-28">
@@ -90,5 +108,41 @@
         </div>
     </section>
 
+    <footer class="w-full h-fit bg-gradient-to-r from-slate-600 to-slate-300 flex flex-col items-center justify-between">
+        <div class="container flex gap-x-24 justify-center p-8 max-sm:flex-col max-sm:gap-y-24">
+            <div class="flex gap-x-2">
+                <img src="../images/logo.png" class="size-7">
+                <h1 class="text-2xl font-bold text-white">LaraTravel</h1>
+            </div>
+
+            <ul class="flex flex-col gap-y-2 font-medium text-white">
+                <li class="text-lg font-semibold">Company</li>
+                <li><a href="" class="text-slate-300 font-medium">Home</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Destinations</a></li>
+                <li><a href="" class="text-slate-300 font-medium">About us</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Contacts</a></li>
+            </ul>
+
+            <ul class="flex flex-col gap-y-2 font-medium text-white">
+                <li class="text-lg font-semibold">Get connected</li>
+                <li><a href="" class="text-slate-300 font-medium">Sign Up</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Log In</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Log in with Google</a></li>
+            </ul>
+
+            <div class="flex flex-col gap-y-2">
+                <h1 class="text-lg text-white font-semibold">Share your support</h1>
+                <div class="flex gap-x-2">
+                    <img src="../images/facebook.png" class="w-[25px] h-[25px]">
+                    <img src="../images/instagram.png" class="w-[25px] h-[25px]">
+                    <img src="../images/twitter-square.png" class="w-[25px] h-[25px]">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-[30px] bg-slate-800 flex justify-center items-center">
+            <p class="text-slate-400 text-sm">@2024 All rights preserved. Read terms and conditions.</p>
+        </div>
+    </footer>
 </body>
 </html>

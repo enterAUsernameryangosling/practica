@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/6f20296d23.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <section>
+        <header class="w-full py-8 flex justify-center z-20">
+            <div class="container">
+                <nav class="flex justify-between items-center">
+                    <div class="flex items-center gap-x-2">
+                        <img src="../images/logo.png" class="size-7">
+                        <h1 id="logo_text" class="text-2xl font-bold text-slate-950">LaraTravel</h1>
+                    </div>
+
+                    <ul class="flex gap-16 font-medium text-slate-950 max-md:hidden">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                    </ul>
+
+                    <button class="px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Log In</button>
+                    
+                    <button id="burger" onclick="menu_burger()" class="md:hidden text-slate-950"><i class="fa-solid fa-bars"></i></button>
+                </nav>
+            </div>
+        </header>
+
+        <div id="mobile_nav" class="absolute w-full h-fit md:hidden bg-white z-10 flex justify-center pb-8 opacity-0 duration-300">
+            <div class="container">
+                <ul class="flex flex-col gap-y-7 font-medium text-slate-950">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+            </div>
+            <script src="burger_pages.js"></script>
+        </div>
+    </section>
+
+    <section class="flex justify-center py-[100px]">
+        <div class="container">
+            <div class="rounded-3xl bg-white shadow-xl flex">
+                <div class="bg-[url('../images/background.png')] bg-center bg-cover rounded-l-3xl px-8 py-24 w-[450px] h-[700px] flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-white font-semibold text-3xl">Get in touch</h3>
+                        <p class="text-slate-300">Complete the form and we will get back with a response soon !</p>
+                    </div>
+    
+                    <div class="flex flex-col gap-y-[20px]">
+                        <div class="flex gap-x-[10px] items-center">
+                            <img src="../images/icon-phone.png">
+                            <p class="text-white font-medium text-lg">+ 220 76 787 25</p>
+                        </div>
+    
+                        <div class="flex gap-x-[10px] items-center">
+                            <img src="../images/icon-mail.png">
+                            <p class="text-white font-medium text-lg">laratravel@gmail.com</p>
+                        </div>
+    
+                        <div class="flex gap-x-[10px] items-center">
+                            <img src="../images/icon-location.png">
+                            <p class="text-white font-medium text-lg">St. Mary 102/5, NY, USA</p>
+                        </div>
+                    </div>
+    
+                    <div class="flex flex-col gap-y-[10px]">
+                        <div>
+                            <h3 class="text-white font-semibold text-xl">Share your support</h3>
+                            <p class="text-slate-300">Follow us on these social media platforms</p>
+                        </div>
+                        
+                        <div class="flex gap-x-2">
+                            <img src="../images/facebook.png" class="w-[25px] h-[25px]">
+                            <img src="../images/instagram.png" class="w-[25px] h-[25px]">
+                            <img src="../images/twitter-square.png" class="w-[25px] h-[25px]">
+                        </div>
+                    </div>
+                </div>
+    
+                <form class="flex flex-col gap-y-10 p-12">
+                    <div class="flex gap-x-16">
+                        <div>
+                            <p class="text-slate-950 font-semibold text-lg">Insert your first name</p>
+                            <input type="text" placeholder="Name" class="p-6 w-[400px] h-[60px] bg-white rounded-full shadow-lg">
+                        </div>
+        
+                        <div>
+                            <p class="text-slate-950 font-semibold text-lg">Insert your last name</p>
+                            <input type="text" placeholder="Surname" class="p-6 w-[400px] h-[60px] bg-white rounded-full shadow-lg">
+                        </div>
+                    </div>
+    
+                    <div class="flex gap-x-16">
+                        <div>
+                            <p class="text-slate-950 font-semibold text-lg">Insert your email address</p>
+                            <input type="text" placeholder="Email" class="p-6 w-[400px] h-[60px] bg-white rounded-full shadow-lg">
+                        </div>
+        
+                        <div>
+                            <p class="text-slate-950 font-semibold text-lg">Insert your phone number</p>
+                            <input type="text" placeholder="+220 | " class="p-6 w-[400px] h-[60px] bg-white rounded-full shadow-lg">
+                        </div>
+                    </div>
+    
+                    <div>
+                        <p class="text-slate-950 font-semibold text-lg">What kind of offer are you looking for?</p>
+    
+                        <div class="flex gap-x-10">
+                            <div class="flex items-center ps-4">
+                                <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="bordered-checkbox-1" class="py-4 ms-2 text-md font-medium text-gray-900 dark:text-slate-600">Customer offers</label>
+                            </div>
+        
+                            <div class="flex items-center ps-4">
+                                <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="bordered-checkbox-1" class="py-4 ms-2 text-md font-medium text-gray-900 dark:text-slate-600">Creator offers</label>
+                            </div>
+        
+                            <div class="flex items-center ps-4">
+                                <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="bordered-checkbox-1" class="py-4 ms-2 text-md font-medium text-gray-900 dark:text-slate-600">Business plan</label>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="flex flex-col gap-y-4">
+                        <p class="text-slate-950 font-semibold text-lg">Write your message</p>
+                        <input type="text" placeholder="Message" class="p-6 w-[370px] h-[60px] bg-white rounded-full shadow-lg">
+                        <button class="w-[100px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Send</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="w-full h-fit bg-gradient-to-r from-slate-600 to-slate-300 flex flex-col items-center justify-between">
+        <div class="container flex gap-x-24 justify-center p-8 max-sm:flex-col max-sm:gap-y-24">
+            <div class="flex gap-x-2">
+                <img src="../images/logo.png" class="size-7">
+                <h1 class="text-2xl font-bold text-white">LaraTravel</h1>
+            </div>
+
+            <ul class="flex flex-col gap-y-2 font-medium text-white">
+                <li class="text-lg font-semibold">Company</li>
+                <li><a href="" class="text-slate-300 font-medium">Home</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Destinations</a></li>
+                <li><a href="" class="text-slate-300 font-medium">About us</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Contacts</a></li>
+            </ul>
+
+            <ul class="flex flex-col gap-y-2 font-medium text-white">
+                <li class="text-lg font-semibold">Get connected</li>
+                <li><a href="" class="text-slate-300 font-medium">Sign Up</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Log In</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Log in with Google</a></li>
+            </ul>
+
+            <div class="flex flex-col gap-y-2">
+                <h1 class="text-lg text-white font-semibold">Share your support</h1>
+                <div class="flex gap-x-2">
+                    <img src="../images/facebook.png" class="w-[25px] h-[25px]">
+                    <img src="../images/instagram.png" class="w-[25px] h-[25px]">
+                    <img src="../images/twitter-square.png" class="w-[25px] h-[25px]">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-[30px] bg-slate-800 flex justify-center items-center">
+            <p class="text-slate-400 text-sm">@2024 All rights preserved. Read terms and conditions.</p>
+        </div>
+    </footer>
+</body>
+</html>
