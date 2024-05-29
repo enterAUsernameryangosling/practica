@@ -48,9 +48,9 @@
     </section>
 
     <section class="flex justify-center py-[100px]">
-        <div class="container">
-            <div class="h-[650px] rounded-3xl bg-white shadow-xl flex">
-                <div class="bg-[url('../images/background.png')] bg-center bg-cover rounded-l-3xl px-8 py-24 w-[450px] h-[650px] flex flex-col justify-between">
+        <div class="container flex justify-center">
+            <div class="w-[1300px] h-[650px] rounded-3xl bg-white shadow-xl flex">
+                <div class="bg-[url('../images/background.png')] bg-center bg-cover rounded-l-3xl px-8 py-24 min-w-[400px] h-[650px] flex flex-col justify-between">
                     <div>
                         <h3 class="text-white font-semibold text-3xl">Get in touch</h3>
                         <p class="text-slate-300">Complete the form and we will get back with a response soon !</p>
@@ -87,28 +87,28 @@
                     </div>
                 </div>
     
-                <form class="flex flex-col gap-y-10 p-16">
-                    <div class="flex gap-x-16">
-                        <div>
+                <form class="w-full flex flex-col gap-y-10 p-16">
+                    <div class="w-[700px] flex gap-x-10">
+                        <div class="w-full">
                             <p class="text-slate-950 font-semibold text-md">Insert your first name</p>
-                            <input type="text" placeholder="Name" class="p-6 w-[400px] h-[50px] bg-white rounded-full shadow-lg">
+                            <input type="text" placeholder="Name" class="p-6 w-full max-w-[400px] h-[50px] bg-white rounded-full shadow-sm">
                         </div>
         
-                        <div>
+                        <div class="w-full">
                             <p class="text-slate-950 font-semibold text-md">Insert your last name</p>
-                            <input type="text" placeholder="Surname" class="p-6 w-[400px] h-[50px] bg-white rounded-full shadow-lg">
+                            <input type="text" placeholder="Surname" class="p-6 w-full max-w-[400px] h-[50px] bg-white rounded-full shadow-sm">
                         </div>
                     </div>
     
-                    <div class="flex gap-x-16">
-                        <div>
+                    <div class="w-[700px] flex gap-x-10">
+                        <div class="w-full">
                             <p class="text-slate-950 font-semibold text-md">Insert your email address</p>
-                            <input type="text" placeholder="Email" class="p-6 w-[400px] h-[50px] bg-white rounded-full shadow-lg">
+                            <input type="text" placeholder="Email" class="p-6 w-full max-w-[400px] h-[50px] bg-white rounded-full shadow-sm">
                         </div>
         
-                        <div>
+                        <div class="w-full">
                             <p class="text-slate-950 font-semibold text-md">Insert your phone number</p>
-                            <input type="text" placeholder="+220 | " class="p-6 w-[400px] h-[50px] bg-white rounded-full shadow-lg">
+                            <input type="text" placeholder="+220 | " class="p-6 w-full max-w-[400px] h-[50px] bg-white rounded-full shadow-sm">
                         </div>
                     </div>
     
@@ -135,8 +135,8 @@
     
                     <div class="flex flex-col gap-y-4">
                         <p class="text-slate-950 font-semibold text-md">Write your message</p>
-                        <input type="text" placeholder="Message" class="p-6 w-[370px] h-[60px] bg-white rounded-full shadow-lg">
-                        <button class="w-[120px] h-[45px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Send</button>
+                        <input type="text" placeholder="Message" class="p-6 max-w-[400px] h-[60px] bg-white rounded-full shadow-sm">
+                        <button class="w-[120px] h-[45px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden shadow-lg">Send</button>
                     </div>
                 </form>
             </div>
