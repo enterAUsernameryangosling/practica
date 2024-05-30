@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6f20296d23.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-    <div class="hidden fixed w-full h-[100vh] bg-black bg-transparent opacity-30"></div> 
+    <div id="darkenScreen" class="fixed w-full h-[100vh] bg-black opacity-30" style="visibility: hidden"></div>
     <!-- OVER HERE !!! -->
-    
+
     <section>
-        <header class="w-full py-8 flex justify-center z-20">
+        <header class="w-full py-8 flex justify-center z-20 max-sm:px-5">
             <div class="container">
                 <nav class="flex justify-between items-center">
                     <div class="flex items-center gap-x-2">
@@ -29,14 +31,17 @@
                         <li><a href="contacts.html">Contacts</a></li>
                     </ul>
 
-                    <button class="px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Log In</button>
-                    
-                    <button id="burger" onclick="menu_burger()" class="md:hidden text-slate-950"><i class="fa-solid fa-bars"></i></button>
+                    <button class="px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Log
+                        In</button>
+
+                    <button id="burger" onclick="menu_burger()" class="md:hidden text-slate-950"><i
+                            class="fa-solid fa-bars"></i></button>
                 </nav>
             </div>
         </header>
 
-        <div id="mobile_nav" class="absolute w-full h-fit md:hidden bg-white z-10 flex justify-center pb-8 opacity-0 duration-300">
+        <div id="mobile_nav"
+            class="absolute w-full h-fit md:hidden bg-white z-10 flex justify-center pb-8 opacity-0 duration-300">
             <div class="container">
                 <ul class="flex flex-col gap-y-7 font-medium text-slate-950">
                     <li><a href="home.html">Home</a></li>
@@ -53,21 +58,24 @@
         <div class="container flex justify-between">
             <div class="flex flex-col gap-y-[20px]">
 
-                <div class="hidden fixed left-[50%] ml-[-300px] p-8 w-[600px] h-[600px] flex flex-col justify-between bg-white shadow-xl rounded-3xl">
-                    
+                <div id="sortCard"
+                    class="fixed left-[50%] ml-[-300px] p-8 w-[600px] h-[600px] flex flex-col justify-between bg-white shadow-xl rounded-3xl"
+                    style="visibility: hidden">
+
                     <div class="flex justify-between">
                         <h3 class="text-xl font-semibold">Filter options</h3>
-                        <button><i class="fa-solid fa-xmark"></i></button>
+                        <button onclick="showSort('close')"><i class="fa-solid fa-xmark"></i></button>
                     </div>
 
                     <div class="flex flex-col gap-y-[10px]">
                         <label for="rating" class="text-md font-medium text-slate-600">Rating</label>
                         <div class="p-4 w-full h-[55px] bg-white shadow-sm rounded-full">
-                            <select name="rating" id="rating" class="w-full focus:outline-none">
-                                <option value="">Best offers(4.8 - 5.0)</option>
-                                <option value="">Good offers(4.0 - 4.5)</option>
-                                <option value="">From 3.0 to 3.9</option>
-                                <option value="">Bellow standard</option>
+                            <select name="rating" id="rating" class="w-full focus:outline-none"
+                                onchange="sortRating(document.getElementById('rating').value)">
+                                <option value="Best offers">Best offers (4.8 - 5.0)</option>
+                                <option value="Good offers">Good offers (4.0 - 4.5)</option>
+                                <option value="Standart">Standart (3.0 to 3.9)</option>
+                                <option value="Bellow standard">Bellow standard</option>
                             </select>
                         </div>
                     </div>
@@ -75,15 +83,16 @@
                     <div class="flex flex-col gap-y-[10px]">
                         <label for="location" class="text-md font-medium text-slate-600">Location</label>
                         <div class="p-4 w-full h-[55px] bg-white shadow-sm rounded-full">
-                            <select name="location" id="location" class="w-full focus:outline-none">
-                                <option value="">Afganistan</option>
-                                <option value="">Angora</option>
-                                <option value="">Japan</option>
-                                <option value="">United States</option>
-                                <option value="">England</option>
-                                <option value="">Moldova</option>
-                                <option value="">Germany</option>
-                                <option value="">Russia</option>
+                            <select name="location" id="location" class="w-full focus:outline-none"
+                                onchange="sortLocation(document.getElementById('location').value)">
+                                <option value="Afganistan">Afganistan</option>
+                                <option value="Angora">Angora</option>
+                                <option value="Kyoto Japan">Kyoto Japan</option>
+                                <option value="United States">United States</option>
+                                <option value="England">England</option>
+                                <option value="Moldova">Moldova</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Russia">Russia</option>
                             </select>
                         </div>
                     </div>
@@ -92,14 +101,18 @@
                         <p class="text-md font-medium text-slate-600">Price($)</p>
 
                         <div class="flex items-center justify-between">
-                            <div class="w-[240px] h-[55px] pl-6 flex items-center bg-white rounded-3xl border-[1px] border-slate-200">
-                                <input type="text" placeholder="From" class="focus:outline-none">
+                            <div
+                                class="w-[240px] h-[55px] pl-6 flex items-center bg-white rounded-3xl border-[1px] border-slate-200">
+                                <input type="text" placeholder="From" class="focus:outline-none" id="priceFrom"
+                                    oninput="sortPriceFrom(document.getElementById('priceFrom').value)">
                             </div>
-                            
+
                             <p class="text-xl font-semibold text-slate-300">-</p>
-    
-                            <div class="w-[240px] h-[55px] pl-6 flex items-center bg-white rounded-3xl border-[1px] border-slate-200">
-                                <input type="text" placeholder="To" class="focus:outline-none">
+
+                            <div
+                                class="w-[240px] h-[55px] pl-6 flex items-center bg-white rounded-3xl border-[1px] border-slate-200">
+                                <input type="text" placeholder="To" class="focus:outline-none" id="priceTo"
+                                    oninput="sortPriceTo(document.getElementById('priceTo').value)">
                             </div>
                         </div>
                     </div>
@@ -108,111 +121,73 @@
                         <p class="text-md font-medium text-slate-600">Duration</p>
 
                         <div class="flex gap-x-[10px]">
-                            <input type="radio" name="duration" id="opt1">
+                            <input type="radio" name="duration" id="opt1" value="short"
+                                onchange="sortDuration(document.getElementById('opt1').value)">
                             <label for="opt1">Up to 5 hours</label>
                         </div>
 
                         <div class="flex gap-x-[10px]">
-                            <input type="radio" name="duration" id="opt2">
+                            <input type="radio" name="duration" id="opt2" value="medium"
+                                onchange="sortDuration(document.getElementById('opt2').value)">
                             <label for="opt2">All day(24h)</label>
                         </div>
 
                         <div class="flex gap-x-[10px]">
-                            <input type="radio" name="duration" id="opt3">
+                            <input type="radio" name="duration" id="opt3" value="long"
+                                onchange="sortDuration(document.getElementById('opt3').value)">
                             <label for="opt3">All week</label>
                         </div>
                     </div>
+
+                    <a href="destinations.html"><button
+                            class="w-full h-[40px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Clear
+                            filters</button></a>
                 </div>
-                <!-- OVER HERE !!! -->
 
                 <div class="flex gap-x-[10px]">
-                    <div class="p-6 w-full h-[50px] flex items-center gap-x-[5px] bg-white text-slate-600 rounded-full shadow-lg">
+                    <div
+                        class="p-6 w-full h-[50px] flex items-center gap-x-[5px] bg-white text-slate-600 rounded-full shadow-lg">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Search...">
+                        <input class="w-full focus:outline-none" type="text" placeholder="Search..." id="search"
+                            oninput="sortSearch(document.getElementById('search').value)">
                     </div>
-                    
-                    <button class="w-[50px] h-[50px] bg-white text-slate-600 shadow-lg rounded-full">
+
+                    <button onclick="showSort('open')"
+                        class="w-[50px] h-[50px] bg-white text-slate-600 shadow-lg rounded-full">
                         <i class="fa-solid fa-filter"></i>
                     </button>
                 </div>
 
-                <div class="w-fit grid grid-cols-3 grid-rows-3 gap-[20px]">
-                    <div class="w-[320px] h-fit flex flex-col bg-white rounded-3xl shadow-xl">
-                        <div><img src="../images/img-obj-1.png" class="rounded-t-3xl"></div>
-                        <div class="p-4 flex flex-col gap-y-[20px]">
-                            <div class="flex flex-col">
-                                <div class="flex justify-between items-center">
-                                    <h3 class="font-semibold text-xl">Kinkaku-ji Temple</h3>
-                
-                                    <div class="flex items-center gap-x-1">
-                                        <p class="text-slate-600">5.0</p>
-                                        <img src="../images/star 1.png">
-                                    </div>
-                                </div>
-                
-                                <div class="flex gap-x-3 items-center">
-                                    <img src="../images/location.png">
-                                    <p>Kyoto Japan</p>
-                                </div>
+                <div id="toursContainer">
+                    <div id="tours" class="w-fit grid grid-cols-3 grid-rows-3 gap-[20px]">
+                        <div
+                            class="w-[320px] h-fit flex flex-col bg-white rounded-3xl shadow-xl hover:scale-105 duration-300">
+                            <div><img src="../images/img-obj-1.png" class="rounded-t-3xl object-cover h-[160px] w-full">
                             </div>
-                            
-                            <div class="flex justify-between items-center">
-                                <button class="w-[120px] h-[40px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Order</button>
-                                <h3 class="font-semibold text-xl text-emerald-600">$625</h3>
-                            </div>
-                        </div> 
-                    </div>
+                            <div class="p-4 flex flex-col gap-y-[20px]">
+                                <div class="flex flex-col">
+                                    <div class="flex justify-between items-center">
+                                        <h3 class="font-semibold text-xl">Kinkaku-ji Temple</h3>
 
-                    <div class="w-[320px] h-fit flex flex-col bg-white rounded-3xl shadow-xl">
-                        <div><img src="../images/img-obj-1.png" class="rounded-t-3xl"></div>
-                        <div class="p-4 flex flex-col gap-y-[20px]">
-                            <div class="flex flex-col">
-                                <div class="flex justify-between items-center">
-                                    <h3 class="font-semibold text-xl">Kinkaku-ji Temple</h3>
-                
-                                    <div class="flex items-center gap-x-1">
-                                        <p class="text-slate-600">5.0</p>
-                                        <img src="../images/star 1.png">
+                                        <div class="flex items-center gap-x-1">
+                                            <p class="text-slate-600">5.0</p>
+                                            <img src="../images/star 1.png">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex gap-x-3 items-center">
+                                        <img src="../images/location.png">
+                                        <p>Kyoto Japan</p>
                                     </div>
                                 </div>
-                
-                                <div class="flex gap-x-3 items-center">
-                                    <img src="../images/location.png">
-                                    <p>Kyoto Japan</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex justify-between items-center">
-                                <button class="w-[120px] h-[40px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Order</button>
-                                <h3 class="font-semibold text-xl text-emerald-600">$625</h3>
-                            </div>
-                        </div> 
-                    </div>
-                    
-                    <div class="w-[320px] h-fit flex flex-col bg-white rounded-3xl shadow-xl">
-                        <div><img src="../images/img-obj-1.png" class="rounded-t-3xl"></div>
-                        <div class="p-4 flex flex-col gap-y-[20px]">
-                            <div class="flex flex-col">
+
                                 <div class="flex justify-between items-center">
-                                    <h3 class="font-semibold text-xl">Kinkaku-ji Temple</h3>
-                
-                                    <div class="flex items-center gap-x-1">
-                                        <p class="text-slate-600">5.0</p>
-                                        <img src="../images/star 1.png">
-                                    </div>
-                                </div>
-                
-                                <div class="flex gap-x-3 items-center">
-                                    <img src="../images/location.png">
-                                    <p>Kyoto Japan</p>
+                                    <button
+                                        class="w-[120px] h-[40px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Order</button>
+                                    <h3 class="font-semibold text-xl text-emerald-600">$625</h3>
                                 </div>
                             </div>
-                            
-                            <div class="flex justify-between items-center">
-                                <button class="w-[120px] h-[40px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Order</button>
-                                <h3 class="font-semibold text-xl text-emerald-600">$625</h3>
-                            </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -226,16 +201,16 @@
                             <p class="text-slate-600">Kyoto Japan</p>
                         </div>
                     </div>
-    
+
                     <div class="w-[50px] h-[50px] bg-white rounded-full shadow-lg flex justify-center items-center">
                         <img src="../images/favorite 1.png">
                     </div>
                 </div>
-                
+
                 <div>
                     <p class="text-lg font-semibold">Description:</p>
                     <p class="text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam.</p>
                 </div>
 
@@ -243,9 +218,15 @@
                     <p class="text-lg font-semibold">Photos/Gallery:</p>
                     <div class="flex flex-col gap-y-[10px]">
                         <div class="flex justify-between">
-                            <div class="w-[100px] h-[100px] bg-white rounded-3xl shadow-lg"></div>
-                            <div class="w-[200px] h-[100px] bg-white rounded-3xl shadow-lg"></div>
-                            <div class="w-[100px] h-[100px] bg-white rounded-3xl shadow-lg"></div>
+                            <div class="w-[100px] h-[100px] bg-white rounded-3xl shadow-lg">
+                                <img src="../images/img-obj-1.png" class="rounded-3xl object-cover w-full h-full">
+                            </div>
+                            <div class="w-[200px] h-[100px] bg-white rounded-3xl shadow-lg">
+                                <img src="../images/img-obj-1.png" class="rounded-3xl object-cover w-full h-full">
+                            </div>
+                            <div class="w-[100px] h-[100px] bg-white rounded-3xl shadow-lg">
+                                <img src="../images/img-obj-1.png" class="rounded-3xl object-cover w-full h-full">
+                            </div>
                         </div>
 
                         <div class="w-full h-[40px] bg-blue-500 rounded-full flex justify-center items-center">
@@ -269,8 +250,8 @@
                                 <p class="text-sm">Kinkaku-ji Temple</p>
                             </div>
                         </div>
-    
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                     </div>
                     <p class="text-slate-600 font-semibold underline">More reviews</p>
@@ -279,5 +260,7 @@
         </div>
     </section>
 
+    <script src="tours.js"></script>
 </body>
+
 </html>
