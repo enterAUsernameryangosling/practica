@@ -16,7 +16,7 @@
     <!-- OVER HERE !!! -->
 
     <section>
-        <header class="w-full py-8 flex justify-center z-20 max-sm:px-5">
+        <header class="w-full py-8 flex justify-center z-20">
             <div class="container">
                 <nav class="flex justify-between items-center">
                     <div class="flex items-center gap-x-2">
@@ -190,75 +190,113 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <div class="p-10 w-[500px] h-[800px] bg-white rounded-3xl shadow-xl flex flex-col justify-between">
-                <div class="flex justify-between">
+            <div id="sideCardContainer">
+                <div id="sideCard" class="p-10 w-[500px] h-[800px] bg-white rounded-3xl shadow-xl flex flex-col justify-between">
+                    <div class="flex justify-between">
+                        <div>
+                            <h3 class="text-3xl font-semibold">Kinkaku-ji Temple</h3>
+                            <div class="flex gap-x-3 items-center">
+                                <img src="../images/location.png">
+                                <p class="text-slate-600">Kyoto Japan</p>
+                            </div>
+                        </div>
+    
+                        <div class="w-[50px] h-[50px] bg-white rounded-full shadow-lg flex justify-center items-center">
+                            <img src="../images/favorite 1.png">
+                        </div>
+                    </div>
+    
                     <div>
-                        <h3 class="text-3xl font-semibold">Kinkaku-ji Temple</h3>
-                        <div class="flex gap-x-3 items-center">
-                            <img src="../images/location.png">
-                            <p class="text-slate-600">Kyoto Japan</p>
-                        </div>
+                        <p class="text-lg font-semibold">Description:</p>
+                        <p class="text-slate-600">Kinkaku-ji, or the Golden Pavilion, is a stunning Zen Buddhist temple in Kyoto, Japan, renowned for its golden exterior and serene gardens.</p>
                     </div>
-
-                    <div class="w-[50px] h-[50px] bg-white rounded-full shadow-lg flex justify-center items-center">
-                        <img src="../images/favorite 1.png">
-                    </div>
-                </div>
-
-                <div>
-                    <p class="text-lg font-semibold">Description:</p>
-                    <p class="text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam.</p>
-                </div>
-
-                <div>
-                    <p class="text-lg font-semibold">Photos/Gallery:</p>
-                    <div class="flex flex-col gap-y-[10px]">
-                        <div class="flex justify-between">
-                            <div class="w-[100px] h-[100px] bg-white rounded-3xl shadow-lg">
-                                <img src="../images/img-obj-1.png" class="rounded-3xl object-cover w-full h-full">
-                            </div>
-                            <div class="w-[200px] h-[100px] bg-white rounded-3xl shadow-lg">
-                                <img src="../images/img-obj-1.png" class="rounded-3xl object-cover w-full h-full">
-                            </div>
-                            <div class="w-[100px] h-[100px] bg-white rounded-3xl shadow-lg">
-                                <img src="../images/img-obj-1.png" class="rounded-3xl object-cover w-full h-full">
-                            </div>
-                        </div>
-
-                        <div class="w-full h-[40px] bg-blue-500 rounded-full flex justify-center items-center">
-                            <p class="text-white font-semibold">More images</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-y-[10px]">
-                    <p class="text-lg font-semibold">Recent reviews:</p>
-                    <div class="w-full h-fit bg-white rounded-3xl shadow-md p-6 flex flex-col gap-y-6">
-                        <div class="flex items-center">
-                            <div class="w-[45px] h-[45px] bg-white rounded-full flex justify-center items-center">
-                                <img src="../images/user1.png">
-                            </div>
-                            <div class="w-full pl-2">
-                                <div class="flex items-center justify-between">
-                                    <p class="font-semibold text-lg">John Lee</p>
-                                    <img src="../images/rating.png">
+    
+                    <div>
+                        <p class="text-lg font-semibold">Photos/Gallery:</p>
+                        <div class="flex flex-col gap-y-[10px]">
+                            <div class="flex justify-between">
+                                <div class="w-[100px] h-[100px] bg-white rounded-3xl shadow-lg">
+                                    <img src="https://theworldtravelguy.com/wp-content/uploads/2020/04/DSCF5510.jpg" class="rounded-3xl object-cover w-full h-full">
                                 </div>
-                                <p class="text-sm">Kinkaku-ji Temple</p>
+                                <div class="w-[200px] h-[100px] bg-white rounded-3xl shadow-lg">
+                                    <img src="https://wallpapercrafter.com/desktop1/504548-Kyoto-Autumnal-Leaves-autumn-autumnal-leaves-shirakawa.jpg" class="rounded-3xl object-cover w-full h-full">
+                                </div>
+                                <div class="w-[100px] h-[100px] bg-white rounded-3xl shadow-lg">
+                                    <img src="https://media.timeout.com/images/106011221/image.jpg" class="rounded-3xl object-cover w-full h-full">
+                                </div>
+                            </div>
+    
+                            <div class="w-full h-[40px] bg-blue-500 rounded-full flex justify-center items-center">
+                                <p class="text-white font-semibold">More images</p>
                             </div>
                         </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                     </div>
-                    <p class="text-slate-600 font-semibold underline">More reviews</p>
+    
+                    <div class="flex flex-col gap-y-[10px]">
+                        <p class="text-lg font-semibold">Recent reviews:</p>
+                        <div class="w-full h-fit bg-white rounded-3xl shadow-md p-6 flex flex-col gap-y-6">
+                            <div class="flex items-center">
+                                <div class="w-[45px] h-[45px] bg-white rounded-full flex justify-center items-center">
+                                    <img src="../images/user1.png">
+                                </div>
+                                <div class="w-full pl-2">
+                                    <div class="flex items-center justify-between">
+                                        <p class="font-semibold text-lg">John Lee</p>
+                                        <img src="../images/rating.png">
+                                    </div>
+                                    <p class="text-sm">Kinkaku-ji Temple</p>
+                                </div>
+                            </div>
+    
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                        </div>
+                        <p class="text-slate-600 font-semibold underline">More reviews</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="w-full h-fit bg-gradient-to-r from-slate-600 to-slate-300 flex flex-col items-center justify-between">
+        <div class="container flex gap-x-24 justify-center px-8 py-16 max-sm:flex-col max-sm:gap-y-24">
+            <div class="flex gap-x-2">
+                <img src="../images/logo.png" class="size-7">
+                <h1 class="text-2xl font-bold text-white">LaraTravel</h1>
+            </div>
+
+            <ul class="flex flex-col gap-y-2 font-medium text-white">
+                <li class="text-lg font-semibold">Company</li>
+                <li><a href="" class="text-slate-300 font-medium">Home</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Destinations</a></li>
+                <li><a href="" class="text-slate-300 font-medium">About us</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Contacts</a></li>
+            </ul>
+
+            <ul class="flex flex-col gap-y-2 font-medium text-white">
+                <li class="text-lg font-semibold">Get connected</li>
+                <li><a href="" class="text-slate-300 font-medium">Sign Up</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Log In</a></li>
+                <li><a href="" class="text-slate-300 font-medium">Log in with Google</a></li>
+            </ul>
+
+            <div class="flex flex-col gap-y-2">
+                <h1 class="text-lg text-white font-semibold">Share your support</h1>
+                <div class="flex gap-x-2">
+                    <img src="../images/facebook.png" class="w-[25px] h-[25px]">
+                    <img src="../images/instagram.png" class="w-[25px] h-[25px]">
+                    <img src="../images/twitter-square.png" class="w-[25px] h-[25px]">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-[30px] bg-slate-800 flex justify-center items-center">
+            <p class="text-slate-400 text-sm">@2024 All rights preserved. Read terms and conditions.</p>
+        </div>
+    </footer>
 
     <script src="tours.js"></script>
 </body>
