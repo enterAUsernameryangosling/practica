@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6f20296d23.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-slate-300 h-[100vh] flex justify-center items-center">
+    
+    <section class="flex justify-center">
+        <div class="container flex justify-center">
+            <div class="w-[1000px] h-fit rounded-3xl bg-white shadow-xl flex max-lg:flex-col">
+                <div class="bg-[url('../images/forest.png')] bg-center bg-cover rounded-l-3xl px-8 py-24 min-w-[350px] h-[650px] flex flex-col justify-center max-lg:rounded-none max-lg:h-[400px] max-lg:rounded-t-3xl max-lg:justify-normal max-lg:gap-y-[20px]">
+                    <div class="flex flex-col items-center gap-y-[20px]">
+                        <div>
+                            <h3 class="text-white font-semibold text-4xl">Are you new here?</h3>
+                            <p class="text-slate-300">Sign up and get a new account right now</p>
+                        </div>
+                        
+                        <a href="signup.html"><button class="w-[130px] h-[45px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden shadow-lg">Sign Up</button></a>
+                    </div>
+                </div>
+
+                <div class="p-20 flex flex-col justify-center gap-y-10">
+                    <div class="flex flex-col">
+                        <h1 class="max-w-[600px] text-3xl font-bold xl:max-w-[750px] xl:text-4xl">Authentification</h1>
+                        <p class="max-w-[560px] text-sm font-semibold text-slate-600">Access and manage your account by logging in.</p>
+                    </div>
+
+                    <form class="w-full flex flex-col gap-y-10">
+                        <div class="flex flex-col gap-y-5">
+                            <div class="w-full">
+                                <p class="text-slate-950 font-semibold text-md">Insert your email address</p>
+                                <input type="text" placeholder="email@gmail.com" class="p-6 w-full max-w-[400px] h-[50px] bg-white rounded-full shadow-sm">
+                            </div>
+            
+                            <div class="w-full">
+                                <p class="text-slate-950 font-semibold text-md">Insert your password</p>
+                                <input type="text" placeholder="******" class="p-6 w-full max-w-[400px] h-[50px] bg-white rounded-full shadow-sm">
+                            </div> 
+                        </div>
+
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center ps-4">
+                                <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="bordered-checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-slate-600">Keep me signed in</label>
+                            </div>
+
+                            <p class="text-sm font-medium text-blue-500">Forgot your password ?</p>
+                        </div>
+
+                        <div class="flex gap-5">
+                            
+                            <button class="w-[130px] h-[45px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden shadow-lg">Log In</button>
+                        </div>
+                    </form>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

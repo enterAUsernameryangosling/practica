@@ -16,12 +16,12 @@ let allTours = [
     },
     Tour_2 = {
         displayName: "Amalfi Coast",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        description: "Amalfi Coast: A breathtaking stretch of coastline in Italy, renowned for its colorful cliffside villages, azure waters, and charming seaside towns.",
         image: "https://www.renetimmermans.com/blog/wp-content/uploads/2016/10/20150806-Amalfi-Italy-0534.jpg",
         rightCardImages: [
-            "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-08/220815-taliban-kabul-mn-1015-0f80da.jpg",
-            "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-08/220815-taliban-kabul-mn-1015-0f80da.jpg",
-            "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-08/220815-taliban-kabul-mn-1015-0f80da.jpg"
+            "https://rare-gallery.com/uploads/posts/833052-Italy-Positano-Amalfi-Houses-Coast.jpg",
+            "https://wactravel.com/wp-content/uploads/2020/06/7-NH-Amalfi.jpg",
+            "https://i.imgur.com/0rzvKeh.jpg"
         ],
         displayRating: "4.5",
         rating: "Standart",
@@ -31,12 +31,12 @@ let allTours = [
     },
     Tour_3 = {
         displayName: "Grand Canion",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        description: "Grand Canyon: A natural wonder in Arizona, USA, boasting awe-inspiring rock formations, deep canyons, and vibrant colors that captivate visitors from around the globe.",
         image: "https://w.forfun.com/fetch/8e/8eb9154a28a90faf1c09ba81267560e7.jpeg",
         rightCardImages: [
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg"
+            "https://traveldigg.com/wp-content/uploads/2016/06/Grand-Canyon-Colorado-River.jpg",
+            "https://w.forfun.com/fetch/e8/e873fa7220541680c9956fa239e1d3a2.jpeg?w=1800",
+            "https://rare-gallery.com/uploads/posts/880206-Arizona-USA-Grand-Canyon-Park-Sky-Crag-Canyon.jpg"
         ],
         displayRating: "2.0",
         rating: "Good offers",
@@ -46,12 +46,12 @@ let allTours = [
     },
     Tour_4 = {
         displayName: "Bavaria",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        description: "Bavaria: A picturesque region in southern Germany, known for its fairy-tale castles, lush countryside, traditional villages, and vibrant cultural heritage.",
         image: "https://rare-gallery.com/uploads/posts/887020-Bamberg-Germany-Houses-Bavaria.jpg",
         rightCardImages: [
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg"
+            "https://w.forfun.com/fetch/f9/f995268e12b526fc6b07ece430995adf.jpeg",
+            "https://rare-gallery.com/uploads/posts/743358-Germany-Coast-Bavaria.jpg",
+            "https://cdna.englishcentral.com/dialogs/27403/demopicture_27403_20160928045037.jpg"
         ],
         displayRating: "2.0",
         rating: "Good offers",
@@ -61,12 +61,12 @@ let allTours = [
     },
     Tour_5 = {
         displayName: "Big Ben Tower",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        description: "Big Ben Tower: An iconic symbol of London, England, the Big Ben Tower stands tall as part of the Palace of Westminster, with its distinctive clock face and majestic presence.",
         image: "https://media.baamboozle.com/uploads/images/273013/1612897124_672393",
         rightCardImages: [
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg"
+            "https://19thholemag.com/wp-content/uploads/2017/12/Travel-London-Big-Ben-Westminster-Bridge.jpg",
+            "https://meets.com/blog/wp-content/uploads/2015/02/london.jpg",
+            "https://get.wallhere.com/photo/England-London-united-kingdom-street-1089076.jpg"
         ],
         displayRating: "2.0",
         rating: "Good offers",
@@ -76,12 +76,12 @@ let allTours = [
     },
     Tour_6 = {
         displayName: "Eifel Tower",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        description: "Eiffel Tower: The epitome of romance and elegance, the Eiffel Tower in Paris, France, offers breathtaking views of the city and stands as a timeless symbol of love and beauty.",
         image: "https://lovetoeatandtravel.com/wp-content/uploads/2020/10/eiffel-tower-768501_1920.pixabay.jpg",
         rightCardImages: [
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg",
-            "https://i.ytimg.com/vi/pEW2AyzxlVg/maxresdefault.jpg"
+            "https://www.thebrokebackpacker.com/wp-content/uploads/2019/03/paris-safe-to-live.jpg",
+            "https://w.forfun.com/fetch/3f/3fc68399e80e2043b060e88a0dd0d8ae.jpeg",
+            "https://iravaban.net/wp-content/uploads/2020/11/paris.jpg"
         ],
         displayRating: "2.0",
         rating: "Good offers",
@@ -163,8 +163,8 @@ function showTours(toursToShow) {
                 </div>
 
                 <div class="flex justify-between items-center">
-                    <button
-                        class="w-[120px] h-[40px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Order</button>
+                    <a href="product.html"><button onclick="storageReference(${i})"
+                        class="w-[120px] h-[40px] px-8 py-2 font-semibold bg-blue-500 text-white rounded-full max-md:hidden">Order</button></a>
                     <h3 class="font-semibold text-xl text-emerald-600">$${toursToShow[i].price}</h3>
                 </div>
             </div>
@@ -173,6 +173,11 @@ function showTours(toursToShow) {
 
         tours.innerHTML += tour
     }
+}
+
+function storageReference(i){
+    let product = admisibleTours[i]
+    localStorage.setItem("prodStorage", JSON.stringify(product))
 }
 
 function curentProd(i) {
